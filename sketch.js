@@ -31,12 +31,13 @@ function setup() {
 
   particles = []; // Initialize the particles array
 
+  //Get help from https://www.youtube.com/watch?v=G3WxVV7aN4I
   capture = createCapture(VIDEO); // Create a video capture element
   capture.size(windowWidth, windowHeight); // Set the capture size
   capture.hide(); // Hide the video capture element
 
   createButtonUI(); // Create the button UI
-  fft = new p5.FFT(); // Initialize the FFT object
+  fft = new p5.FFT(); // Initialize the FFT object and get help from Chatgpt
 
   initParticles(); // Initialize the particles
 }
@@ -115,7 +116,7 @@ function initParticles() {
 }
 
 function createButtonUI() {
-  if (webcamButton) webcamButton.remove(); // Remove the old button
+  if (webcamButton) webcamButton.remove(); // Remove the old button and get help from Chatgpt
   webcamButton = createButton('Use Webcam');
   webcamButton.position(20, 20);
   webcamButton.mousePressed(startWebcamCapture); // Bind the button click event
@@ -193,6 +194,7 @@ class Particle {
   }
 }
 
+//Get help from https://www.youtube.com/watch?v=2O3nm0Nvbi4
 function drawRectangles() {
   let spectrum = fft.analyze(); // Get the spectrum data
   let rectCount = 20; // Number of rectangles
